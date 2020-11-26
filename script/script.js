@@ -55,8 +55,16 @@ console.log('================== 5 ==================');
 console.log('================== 6 ==================');
 
 
-    
+let dateTime = new Date();
 
+function gettDate(p){
+        if(p > 0 && p < 10){
+            return p = '0' + p;
+        }else{
+            return p;
+        }
+    }
+console.log(`${gettDate(dateTime.getHours())}:${gettDate(dateTime.getMinutes())}:${gettDate(dateTime.getSeconds())} ${gettDate(dateTime.getDate())}.${gettDate(dateTime.getMonth()+1)}.${gettDate(dateTime.getFullYear())}`)
 
 console.log('================== 7 ==================');
 
@@ -68,7 +76,7 @@ console.log('================== 7 ==================');
 console.log('================== 8 ==================');
 
 function telephone(a){
-    let regExp = /\+[0-9]{3}[0-9]{2}[0-9]{7}/,
+    let regExp = /\+[0-9]{3}\s?\(?-?[0-9]{2}\)?\s??-?[0-9]{3}\s?-?[0-9]{2}\s?-?[0-9]{2}/,
         tel = a;
         if(regExp.test(tel) == true){
             return true;
@@ -80,4 +88,9 @@ console.log(telephone('+234659876572')) // ?
 
 
 console.log('================== 9 ==================');
+
+
+
+
+
 console.log('================== 10 ==================');
